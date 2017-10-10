@@ -36,8 +36,9 @@
             this.buttonColor = new System.Windows.Forms.Button();
             this.buttonSave = new System.Windows.Forms.Button();
             this.buttonZoomOutMuch = new System.Windows.Forms.Button();
-            this.buttonZoomInMuch = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+      this.buttonZoomInMuch = new System.Windows.Forms.Button();
+      this.buttonScript = new System.Windows.Forms.Button();
+      ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -68,11 +69,12 @@
             this.splitContainer1.Location = new System.Drawing.Point(0, 0);
             this.splitContainer1.Name = "splitContainer1";
             this.splitContainer1.Orientation = System.Windows.Forms.Orientation.Horizontal;
-            // 
-            // splitContainer1.Panel1
-            // 
-            this.splitContainer1.Panel1.Controls.Add(this.buttonZoomInMuch);
-            this.splitContainer1.Panel1.Controls.Add(this.buttonZoomOutMuch);
+      // 
+      // splitContainer1.Panel1
+      // 
+      this.splitContainer1.Panel1.Controls.Add(this.buttonScript);
+      this.splitContainer1.Panel1.Controls.Add(this.buttonZoomInMuch);
+      this.splitContainer1.Panel1.Controls.Add(this.buttonZoomOutMuch);
             this.splitContainer1.Panel1.Controls.Add(this.buttonZoomIn);
             this.splitContainer1.Panel1.Controls.Add(this.buttonZoomOut);
             this.splitContainer1.Panel1.Controls.Add(this.buttonColor);
@@ -145,22 +147,34 @@
             this.buttonZoomOutMuch.Text = "Viel Kleiner";
             this.buttonZoomOutMuch.UseVisualStyleBackColor = true;
             this.buttonZoomOutMuch.Click += new System.EventHandler(this.buttonZoomOutMuch_Click);
-            // 
-            // buttonZoomInMuch
-            // 
-            this.buttonZoomInMuch.AutoSize = true;
-            this.buttonZoomInMuch.Dock = System.Windows.Forms.DockStyle.Left;
-            this.buttonZoomInMuch.Location = new System.Drawing.Point(500, 0);
-            this.buttonZoomInMuch.Name = "buttonZoomInMuch";
-            this.buttonZoomInMuch.Size = new System.Drawing.Size(100, 40);
-            this.buttonZoomInMuch.TabIndex = 7;
-            this.buttonZoomInMuch.Text = "Viel Größer";
-            this.buttonZoomInMuch.UseVisualStyleBackColor = true;
-            this.buttonZoomInMuch.Click += new System.EventHandler(this.buttonZoomInMuch_Click);
-            // 
-            // Form1
-            // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+      // 
+      // buttonZoomInMuch
+      // 
+      this.buttonZoomInMuch.AutoSize = true;
+      this.buttonZoomInMuch.Dock = System.Windows.Forms.DockStyle.Left;
+      this.buttonZoomInMuch.Location = new System.Drawing.Point(500, 0);
+      this.buttonZoomInMuch.Name = "buttonZoomInMuch";
+      this.buttonZoomInMuch.Size = new System.Drawing.Size(100, 40);
+      this.buttonZoomInMuch.TabIndex = 7;
+      this.buttonZoomInMuch.Text = "Viel Größer";
+      this.buttonZoomInMuch.UseVisualStyleBackColor = true;
+      this.buttonZoomInMuch.Click += new System.EventHandler(this.buttonZoomInMuch_Click);
+      // 
+      // buttonScript
+      // 
+      this.buttonScript.AutoSize = true;
+      this.buttonScript.Dock = System.Windows.Forms.DockStyle.Left;
+      this.buttonScript.Location = new System.Drawing.Point(500, 0);
+      this.buttonScript.Name = "buttonScript";
+      this.buttonScript.Size = new System.Drawing.Size(100, 40);
+      this.buttonScript.TabIndex = 7;
+      this.buttonScript.Text = "Script";
+      this.buttonScript.UseVisualStyleBackColor = true;
+      this.buttonScript.Click += new System.EventHandler(this.buttonScript_Click);
+      // 
+      // Form1
+      // 
+      this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1120, 452);
             this.Controls.Add(this.splitContainer1);
@@ -184,8 +198,9 @@
         private System.Windows.Forms.Button buttonColor;
         private System.Windows.Forms.Button buttonZoomOut;
         private System.Windows.Forms.Button buttonZoomIn;
-        private System.Windows.Forms.Button buttonZoomInMuch;
-        private System.Windows.Forms.Button buttonZoomOutMuch;
-    }
+    private System.Windows.Forms.Button buttonZoomInMuch;
+    private System.Windows.Forms.Button buttonZoomOutMuch;
+    private System.Windows.Forms.Button buttonScript;
+  }
 }
 
