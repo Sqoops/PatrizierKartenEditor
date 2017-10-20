@@ -276,6 +276,100 @@ namespace PatrizierKartenEditor
               dataGridView1.Rows[RowIndex - 3].Cells[ColumnIndex - 1].Value = "A0";
           }
         }
+      // clear stuff2
+      for (int ColumnIndex = 2; ColumnIndex < 126; ColumnIndex++)
+        for (int RowIndex = 1; RowIndex < 222; RowIndex++)
+        {
+          // clear steinfelsen 1
+          if (dataGridView1.Rows[RowIndex].Cells[ColumnIndex].Value.Equals("0D"))
+            if (dataGridView1.Rows[RowIndex + 1].Cells[ColumnIndex].Value.Equals("0D"))
+              if (dataGridView1.Rows[RowIndex + 2].Cells[ColumnIndex].Value.Equals("0D"))
+                if (dataGridView1.Rows[RowIndex + 1].Cells[ColumnIndex + 1].Value.Equals("0D"))
+                  if (dataGridView1.Rows[RowIndex + 2].Cells[ColumnIndex + 1].Value.Equals("0D"))
+                    if (dataGridView1.Rows[RowIndex + 3].Cells[ColumnIndex + 1].Value.Equals("0D"))
+
+                      if (dataGridView1.Rows[RowIndex - 1].Cells[ColumnIndex].Value.Equals("20") || dataGridView1.Rows[RowIndex - 1].Cells[ColumnIndex].Value.Equals("09") || dataGridView1.Rows[RowIndex - 1].Cells[ColumnIndex].Value.Equals("10") || dataGridView1.Rows[RowIndex - 1].Cells[ColumnIndex].Value.Equals("11"))
+                        if (dataGridView1.Rows[RowIndex + 3].Cells[ColumnIndex].Value.Equals("20") || dataGridView1.Rows[RowIndex + 3].Cells[ColumnIndex].Value.Equals("09") || dataGridView1.Rows[RowIndex + 3].Cells[ColumnIndex].Value.Equals("10") || dataGridView1.Rows[RowIndex + 3].Cells[ColumnIndex].Value.Equals("11"))
+
+                          if (dataGridView1.Rows[RowIndex - 1].Cells[ColumnIndex - 1].Value.Equals("20") || dataGridView1.Rows[RowIndex - 1].Cells[ColumnIndex - 1].Value.Equals("09") || dataGridView1.Rows[RowIndex - 1].Cells[ColumnIndex - 1].Value.Equals("10") || dataGridView1.Rows[RowIndex - 1].Cells[ColumnIndex - 1].Value.Equals("11"))
+                            if (dataGridView1.Rows[RowIndex].Cells[ColumnIndex - 1].Value.Equals("20") || dataGridView1.Rows[RowIndex].Cells[ColumnIndex - 1].Value.Equals("09") || dataGridView1.Rows[RowIndex].Cells[ColumnIndex - 1].Value.Equals("10") || dataGridView1.Rows[RowIndex].Cells[ColumnIndex - 1].Value.Equals("11"))
+                              if (dataGridView1.Rows[RowIndex + 1].Cells[ColumnIndex - 1].Value.Equals("20") || dataGridView1.Rows[RowIndex + 1].Cells[ColumnIndex - 1].Value.Equals("09") || dataGridView1.Rows[RowIndex + 1].Cells[ColumnIndex - 1].Value.Equals("10") || dataGridView1.Rows[RowIndex + 1].Cells[ColumnIndex - 1].Value.Equals("11"))
+                                if (dataGridView1.Rows[RowIndex + 2].Cells[ColumnIndex - 1].Value.Equals("20") || dataGridView1.Rows[RowIndex + 2].Cells[ColumnIndex - 1].Value.Equals("09") || dataGridView1.Rows[RowIndex + 2].Cells[ColumnIndex - 1].Value.Equals("10") || dataGridView1.Rows[RowIndex + 2].Cells[ColumnIndex - 1].Value.Equals("11"))
+                                  if (dataGridView1.Rows[RowIndex + 3].Cells[ColumnIndex - 1].Value.Equals("20") || dataGridView1.Rows[RowIndex + 3].Cells[ColumnIndex - 1].Value.Equals("09") || dataGridView1.Rows[RowIndex + 3].Cells[ColumnIndex - 1].Value.Equals("10") || dataGridView1.Rows[RowIndex + 3].Cells[ColumnIndex - 1].Value.Equals("11"))
+
+                                    if (dataGridView1.Rows[RowIndex].Cells[ColumnIndex + 1].Value.Equals("20") || dataGridView1.Rows[RowIndex].Cells[ColumnIndex + 1].Value.Equals("09") || dataGridView1.Rows[RowIndex].Cells[ColumnIndex + 1].Value.Equals("10") || dataGridView1.Rows[RowIndex].Cells[ColumnIndex + 1].Value.Equals("11"))
+                                      if (dataGridView1.Rows[RowIndex + 4].Cells[ColumnIndex + 1].Value.Equals("20") || dataGridView1.Rows[RowIndex + 4].Cells[ColumnIndex + 1].Value.Equals("09") || dataGridView1.Rows[RowIndex + 4].Cells[ColumnIndex + 1].Value.Equals("10") || dataGridView1.Rows[RowIndex + 4].Cells[ColumnIndex + 1].Value.Equals("11"))
+
+                                        if (dataGridView1.Rows[RowIndex].Cells[ColumnIndex + 2].Value.Equals("20") || dataGridView1.Rows[RowIndex].Cells[ColumnIndex + 2].Value.Equals("09") || dataGridView1.Rows[RowIndex].Cells[ColumnIndex + 2].Value.Equals("10") || dataGridView1.Rows[RowIndex].Cells[ColumnIndex + 2].Value.Equals("11"))
+                                          if (dataGridView1.Rows[RowIndex + 1].Cells[ColumnIndex + 2].Value.Equals("20") || dataGridView1.Rows[RowIndex + 1].Cells[ColumnIndex + 2].Value.Equals("09") || dataGridView1.Rows[RowIndex + 1].Cells[ColumnIndex + 2].Value.Equals("10") || dataGridView1.Rows[RowIndex + 1].Cells[ColumnIndex + 2].Value.Equals("11"))
+                                            if (dataGridView1.Rows[RowIndex + 2].Cells[ColumnIndex + 2].Value.Equals("20") || dataGridView1.Rows[RowIndex + 2].Cells[ColumnIndex + 2].Value.Equals("09") || dataGridView1.Rows[RowIndex + 2].Cells[ColumnIndex + 2].Value.Equals("10") || dataGridView1.Rows[RowIndex + 2].Cells[ColumnIndex + 2].Value.Equals("11"))
+                                              if (dataGridView1.Rows[RowIndex + 3].Cells[ColumnIndex + 2].Value.Equals("20") || dataGridView1.Rows[RowIndex + 3].Cells[ColumnIndex + 2].Value.Equals("09") || dataGridView1.Rows[RowIndex + 3].Cells[ColumnIndex + 2].Value.Equals("10") || dataGridView1.Rows[RowIndex + 3].Cells[ColumnIndex + 2].Value.Equals("11"))
+                                                if (dataGridView1.Rows[RowIndex + 4].Cells[ColumnIndex + 2].Value.Equals("20") || dataGridView1.Rows[RowIndex + 4].Cells[ColumnIndex + 2].Value.Equals("09") || dataGridView1.Rows[RowIndex + 4].Cells[ColumnIndex + 2].Value.Equals("10") || dataGridView1.Rows[RowIndex + 4].Cells[ColumnIndex + 2].Value.Equals("11"))
+                                                {
+                                                  if (dataGridView1.Rows[RowIndex - 1].Cells[ColumnIndex].Value.Equals("20") || dataGridView1.Rows[RowIndex + 3].Cells[ColumnIndex].Value.Equals("20"))
+                                                  {
+                                                    dataGridView1.Rows[RowIndex].Cells[ColumnIndex].Value = "20";
+                                                    dataGridView1.Rows[RowIndex + 1].Cells[ColumnIndex].Value = "20";
+                                                    dataGridView1.Rows[RowIndex + 2].Cells[ColumnIndex].Value = "20";
+                                                    dataGridView1.Rows[RowIndex + 1].Cells[ColumnIndex + 1].Value = "20";
+                                                    dataGridView1.Rows[RowIndex + 2].Cells[ColumnIndex + 1].Value = "20";
+                                                    dataGridView1.Rows[RowIndex + 3].Cells[ColumnIndex + 1].Value = "20";
+                                                  }
+                                                  if (dataGridView1.Rows[RowIndex - 1].Cells[ColumnIndex].Value.Equals("10") || dataGridView1.Rows[RowIndex + 3].Cells[ColumnIndex].Value.Equals("10"))
+                                                  {
+                                                    dataGridView1.Rows[RowIndex].Cells[ColumnIndex].Value = "10";
+                                                    dataGridView1.Rows[RowIndex + 1].Cells[ColumnIndex].Value = "10";
+                                                    dataGridView1.Rows[RowIndex + 2].Cells[ColumnIndex].Value = "10";
+                                                    dataGridView1.Rows[RowIndex + 1].Cells[ColumnIndex + 1].Value = "10";
+                                                    dataGridView1.Rows[RowIndex + 2].Cells[ColumnIndex + 1].Value = "10";
+                                                    dataGridView1.Rows[RowIndex + 3].Cells[ColumnIndex + 1].Value = "10";
+                                                  }
+                                                }
+          // clear steinfelsen 2
+          if (dataGridView1.Rows[RowIndex].Cells[ColumnIndex].Value.Equals("0D"))
+            if (dataGridView1.Rows[RowIndex + 1].Cells[ColumnIndex].Value.Equals("0D"))
+              if (dataGridView1.Rows[RowIndex + 2].Cells[ColumnIndex].Value.Equals("0D"))
+                if (dataGridView1.Rows[RowIndex + 3].Cells[ColumnIndex].Value.Equals("0D"))
+                  if (dataGridView1.Rows[RowIndex + 1].Cells[ColumnIndex - 1].Value.Equals("0D"))
+                    if (dataGridView1.Rows[RowIndex + 2].Cells[ColumnIndex + 1].Value.Equals("0D"))
+
+                      if (dataGridView1.Rows[RowIndex - 1].Cells[ColumnIndex].Value.Equals("20") || dataGridView1.Rows[RowIndex - 1].Cells[ColumnIndex].Value.Equals("09") || dataGridView1.Rows[RowIndex - 1].Cells[ColumnIndex].Value.Equals("10") || dataGridView1.Rows[RowIndex - 1].Cells[ColumnIndex].Value.Equals("11"))
+                        if (dataGridView1.Rows[RowIndex + 4].Cells[ColumnIndex].Value.Equals("20") || dataGridView1.Rows[RowIndex + 4].Cells[ColumnIndex].Value.Equals("09") || dataGridView1.Rows[RowIndex + 4].Cells[ColumnIndex].Value.Equals("10") || dataGridView1.Rows[RowIndex + 4].Cells[ColumnIndex].Value.Equals("11"))
+
+                          if (dataGridView1.Rows[RowIndex].Cells[ColumnIndex - 1].Value.Equals("20") || dataGridView1.Rows[RowIndex].Cells[ColumnIndex - 1].Value.Equals("09") || dataGridView1.Rows[RowIndex].Cells[ColumnIndex - 1].Value.Equals("10") || dataGridView1.Rows[RowIndex].Cells[ColumnIndex - 1].Value.Equals("11"))
+                            if (dataGridView1.Rows[RowIndex + 1].Cells[ColumnIndex - 2].Value.Equals("20") || dataGridView1.Rows[RowIndex + 1].Cells[ColumnIndex - 2].Value.Equals("09") || dataGridView1.Rows[RowIndex + 1].Cells[ColumnIndex - 2].Value.Equals("10") || dataGridView1.Rows[RowIndex + 1].Cells[ColumnIndex - 2].Value.Equals("11"))
+                              if (dataGridView1.Rows[RowIndex + 2].Cells[ColumnIndex - 1].Value.Equals("20") || dataGridView1.Rows[RowIndex + 2].Cells[ColumnIndex - 1].Value.Equals("09") || dataGridView1.Rows[RowIndex + 2].Cells[ColumnIndex - 1].Value.Equals("10") || dataGridView1.Rows[RowIndex + 2].Cells[ColumnIndex - 1].Value.Equals("11"))
+                                if (dataGridView1.Rows[RowIndex + 3].Cells[ColumnIndex - 1].Value.Equals("20") || dataGridView1.Rows[RowIndex + 3].Cells[ColumnIndex - 1].Value.Equals("09") || dataGridView1.Rows[RowIndex + 3].Cells[ColumnIndex - 1].Value.Equals("10") || dataGridView1.Rows[RowIndex + 3].Cells[ColumnIndex - 1].Value.Equals("11"))
+                                  if (dataGridView1.Rows[RowIndex + 4].Cells[ColumnIndex - 1].Value.Equals("20") || dataGridView1.Rows[RowIndex + 4].Cells[ColumnIndex - 1].Value.Equals("09") || dataGridView1.Rows[RowIndex + 4].Cells[ColumnIndex - 1].Value.Equals("10") || dataGridView1.Rows[RowIndex + 4].Cells[ColumnIndex - 1].Value.Equals("11"))
+
+                                    if (dataGridView1.Rows[RowIndex].Cells[ColumnIndex + 1].Value.Equals("20") || dataGridView1.Rows[RowIndex].Cells[ColumnIndex + 1].Value.Equals("09") || dataGridView1.Rows[RowIndex].Cells[ColumnIndex + 1].Value.Equals("10") || dataGridView1.Rows[RowIndex].Cells[ColumnIndex + 1].Value.Equals("11"))
+                                      if (dataGridView1.Rows[RowIndex + 3].Cells[ColumnIndex + 1].Value.Equals("20") || dataGridView1.Rows[RowIndex + 3].Cells[ColumnIndex + 1].Value.Equals("09") || dataGridView1.Rows[RowIndex + 3].Cells[ColumnIndex + 1].Value.Equals("10") || dataGridView1.Rows[RowIndex + 3].Cells[ColumnIndex + 1].Value.Equals("11"))
+                                        if (dataGridView1.Rows[RowIndex + 4].Cells[ColumnIndex + 1].Value.Equals("20") || dataGridView1.Rows[RowIndex + 4].Cells[ColumnIndex + 1].Value.Equals("09") || dataGridView1.Rows[RowIndex + 4].Cells[ColumnIndex + 1].Value.Equals("10") || dataGridView1.Rows[RowIndex + 4].Cells[ColumnIndex + 1].Value.Equals("11"))
+
+                                          if (dataGridView1.Rows[RowIndex + 1].Cells[ColumnIndex + 2].Value.Equals("20") || dataGridView1.Rows[RowIndex + 1].Cells[ColumnIndex + 2].Value.Equals("09") || dataGridView1.Rows[RowIndex + 1].Cells[ColumnIndex + 2].Value.Equals("10") || dataGridView1.Rows[RowIndex + 1].Cells[ColumnIndex + 2].Value.Equals("11"))
+                                            if (dataGridView1.Rows[RowIndex + 2].Cells[ColumnIndex + 2].Value.Equals("20") || dataGridView1.Rows[RowIndex + 2].Cells[ColumnIndex + 2].Value.Equals("09") || dataGridView1.Rows[RowIndex + 2].Cells[ColumnIndex + 2].Value.Equals("10") || dataGridView1.Rows[RowIndex + 2].Cells[ColumnIndex + 2].Value.Equals("11"))
+                                              if (dataGridView1.Rows[RowIndex + 3].Cells[ColumnIndex + 2].Value.Equals("20") || dataGridView1.Rows[RowIndex + 3].Cells[ColumnIndex + 2].Value.Equals("09") || dataGridView1.Rows[RowIndex + 3].Cells[ColumnIndex + 2].Value.Equals("10") || dataGridView1.Rows[RowIndex + 3].Cells[ColumnIndex + 2].Value.Equals("11"))
+                                              {
+                                                if (dataGridView1.Rows[RowIndex - 1].Cells[ColumnIndex].Value.Equals("20") || dataGridView1.Rows[RowIndex + 4].Cells[ColumnIndex].Value.Equals("20"))
+                                                {
+                                                  dataGridView1.Rows[RowIndex].Cells[ColumnIndex].Value = "20";
+                                                  dataGridView1.Rows[RowIndex + 1].Cells[ColumnIndex].Value = "20";
+                                                  dataGridView1.Rows[RowIndex + 2].Cells[ColumnIndex].Value = "20";
+                                                  dataGridView1.Rows[RowIndex + 3].Cells[ColumnIndex].Value = "20";
+                                                  dataGridView1.Rows[RowIndex + 1].Cells[ColumnIndex - 1].Value = "20";
+                                                  dataGridView1.Rows[RowIndex + 2].Cells[ColumnIndex + 1].Value = "20";
+                                                }
+                                                if (dataGridView1.Rows[RowIndex - 1].Cells[ColumnIndex].Value.Equals("10") || dataGridView1.Rows[RowIndex + 4].Cells[ColumnIndex].Value.Equals("10"))
+                                                {
+                                                  dataGridView1.Rows[RowIndex].Cells[ColumnIndex].Value = "10";
+                                                  dataGridView1.Rows[RowIndex + 1].Cells[ColumnIndex].Value = "10";
+                                                  dataGridView1.Rows[RowIndex + 2].Cells[ColumnIndex].Value = "10";
+                                                  dataGridView1.Rows[RowIndex + 3].Cells[ColumnIndex].Value = "10";
+                                                  dataGridView1.Rows[RowIndex + 1].Cells[ColumnIndex - 1].Value = "10";
+                                                  dataGridView1.Rows[RowIndex + 2].Cells[ColumnIndex + 1].Value = "10";
+                                                }
+                                              }
+        }
       // haus oben rechts von der inneren straße 
       for (int ColumnIndex = 1; ColumnIndex < 127; ColumnIndex += 1)
         for (int RowIndex = 2; RowIndex < 224; RowIndex += 1)
@@ -408,9 +502,94 @@ namespace PatrizierKartenEditor
                         dataGridView1.Rows[RowIndex + 1].Cells[ColumnIndex - 2].Value = "9E";
                         dataGridView1.Rows[RowIndex].Cells[ColumnIndex - 2].Value = "9E";
                       }
-      // arbeitsplatz alles reihe oben
+      //     // arbeitsplatz alles reihe oben
+      //     for (int ColumnIndex = 3; ColumnIndex < 125; ColumnIndex += 1)
+      //       for (int RowIndex = 10; RowIndex < 222; RowIndex += 1)
+      //
+      //         if (dataGridView1.Rows[RowIndex - 4].Cells[ColumnIndex - 2].Value.Equals("04") || dataGridView1.Rows[RowIndex - 4].Cells[ColumnIndex - 2].Value.Equals("10") || dataGridView1.Rows[RowIndex - 4].Cells[ColumnIndex - 2].Value.Equals("11") || dataGridView1.Rows[RowIndex - 4].Cells[ColumnIndex - 2].Value.Equals("20") || dataGridView1.Rows[RowIndex - 4].Cells[ColumnIndex - 2].Value.Equals("3B"))
+      //
+      //           if (dataGridView1.Rows[RowIndex - 6].Cells[ColumnIndex - 1].Value.Equals("04") || dataGridView1.Rows[RowIndex - 6].Cells[ColumnIndex - 1].Value.Equals("10") || dataGridView1.Rows[RowIndex - 6].Cells[ColumnIndex - 1].Value.Equals("11") || dataGridView1.Rows[RowIndex - 6].Cells[ColumnIndex - 1].Value.Equals("20") || dataGridView1.Rows[RowIndex - 6].Cells[ColumnIndex - 1].Value.Equals("3B"))
+      //             if (dataGridView1.Rows[RowIndex - 5].Cells[ColumnIndex - 1].Value.Equals("04") || dataGridView1.Rows[RowIndex - 5].Cells[ColumnIndex - 1].Value.Equals("10") || dataGridView1.Rows[RowIndex - 5].Cells[ColumnIndex - 1].Value.Equals("11") || dataGridView1.Rows[RowIndex - 5].Cells[ColumnIndex - 1].Value.Equals("20") || dataGridView1.Rows[RowIndex - 5].Cells[ColumnIndex - 1].Value.Equals("3B"))
+      //               if (dataGridView1.Rows[RowIndex - 4].Cells[ColumnIndex - 1].Value.Equals("04") || dataGridView1.Rows[RowIndex - 4].Cells[ColumnIndex - 1].Value.Equals("10") || dataGridView1.Rows[RowIndex - 4].Cells[ColumnIndex - 1].Value.Equals("11") || dataGridView1.Rows[RowIndex - 4].Cells[ColumnIndex - 1].Value.Equals("20") || dataGridView1.Rows[RowIndex - 4].Cells[ColumnIndex - 1].Value.Equals("3B"))
+      //                 if (dataGridView1.Rows[RowIndex - 3].Cells[ColumnIndex - 1].Value.Equals("04") || dataGridView1.Rows[RowIndex - 3].Cells[ColumnIndex - 1].Value.Equals("10") || dataGridView1.Rows[RowIndex - 3].Cells[ColumnIndex - 1].Value.Equals("11") || dataGridView1.Rows[RowIndex - 3].Cells[ColumnIndex - 1].Value.Equals("20") || dataGridView1.Rows[RowIndex - 3].Cells[ColumnIndex - 1].Value.Equals("3B"))
+      //                   if (dataGridView1.Rows[RowIndex - 2].Cells[ColumnIndex - 1].Value.Equals("04") || dataGridView1.Rows[RowIndex - 2].Cells[ColumnIndex - 1].Value.Equals("10") || dataGridView1.Rows[RowIndex - 2].Cells[ColumnIndex - 1].Value.Equals("11") || dataGridView1.Rows[RowIndex - 2].Cells[ColumnIndex - 1].Value.Equals("20") || dataGridView1.Rows[RowIndex - 2].Cells[ColumnIndex - 1].Value.Equals("3B"))
+      //
+      //                     if (dataGridView1.Rows[RowIndex - 8].Cells[ColumnIndex].Value.Equals("04") || dataGridView1.Rows[RowIndex - 8].Cells[ColumnIndex].Value.Equals("10") || dataGridView1.Rows[RowIndex - 8].Cells[ColumnIndex].Value.Equals("11") || dataGridView1.Rows[RowIndex - 8].Cells[ColumnIndex].Value.Equals("20") || dataGridView1.Rows[RowIndex - 8].Cells[ColumnIndex].Value.Equals("3B"))
+      //                       if (dataGridView1.Rows[RowIndex - 7].Cells[ColumnIndex].Value.Equals("04") || dataGridView1.Rows[RowIndex - 7].Cells[ColumnIndex].Value.Equals("10") || dataGridView1.Rows[RowIndex - 7].Cells[ColumnIndex].Value.Equals("11") || dataGridView1.Rows[RowIndex - 7].Cells[ColumnIndex].Value.Equals("20") || dataGridView1.Rows[RowIndex - 7].Cells[ColumnIndex].Value.Equals("3B"))
+      //                         if (dataGridView1.Rows[RowIndex - 6].Cells[ColumnIndex].Value.Equals("04") || dataGridView1.Rows[RowIndex - 6].Cells[ColumnIndex].Value.Equals("10") || dataGridView1.Rows[RowIndex - 6].Cells[ColumnIndex].Value.Equals("11") || dataGridView1.Rows[RowIndex - 6].Cells[ColumnIndex].Value.Equals("20") || dataGridView1.Rows[RowIndex - 6].Cells[ColumnIndex].Value.Equals("3B"))
+      //                           if (dataGridView1.Rows[RowIndex - 5].Cells[ColumnIndex].Value.Equals("04") || dataGridView1.Rows[RowIndex - 5].Cells[ColumnIndex].Value.Equals("10") || dataGridView1.Rows[RowIndex - 5].Cells[ColumnIndex].Value.Equals("11") || dataGridView1.Rows[RowIndex - 5].Cells[ColumnIndex].Value.Equals("20") || dataGridView1.Rows[RowIndex - 5].Cells[ColumnIndex].Value.Equals("3B"))
+      //                             if (dataGridView1.Rows[RowIndex - 4].Cells[ColumnIndex].Value.Equals("04") || dataGridView1.Rows[RowIndex - 4].Cells[ColumnIndex].Value.Equals("10") || dataGridView1.Rows[RowIndex - 4].Cells[ColumnIndex].Value.Equals("11") || dataGridView1.Rows[RowIndex - 4].Cells[ColumnIndex].Value.Equals("20") || dataGridView1.Rows[RowIndex - 4].Cells[ColumnIndex].Value.Equals("3B"))
+      //                               if (dataGridView1.Rows[RowIndex - 3].Cells[ColumnIndex].Value.Equals("04") || dataGridView1.Rows[RowIndex - 3].Cells[ColumnIndex].Value.Equals("10") || dataGridView1.Rows[RowIndex - 3].Cells[ColumnIndex].Value.Equals("11") || dataGridView1.Rows[RowIndex - 3].Cells[ColumnIndex].Value.Equals("20") || dataGridView1.Rows[RowIndex - 3].Cells[ColumnIndex].Value.Equals("3B"))
+      //                                 if (dataGridView1.Rows[RowIndex - 2].Cells[ColumnIndex].Value.Equals("04") || dataGridView1.Rows[RowIndex - 2].Cells[ColumnIndex].Value.Equals("10") || dataGridView1.Rows[RowIndex - 2].Cells[ColumnIndex].Value.Equals("11") || dataGridView1.Rows[RowIndex - 2].Cells[ColumnIndex].Value.Equals("20") || dataGridView1.Rows[RowIndex - 2].Cells[ColumnIndex].Value.Equals("3B"))
+      //                                   if (dataGridView1.Rows[RowIndex - 1].Cells[ColumnIndex].Value.Equals("04") || dataGridView1.Rows[RowIndex - 1].Cells[ColumnIndex].Value.Equals("10") || dataGridView1.Rows[RowIndex - 1].Cells[ColumnIndex].Value.Equals("11") || dataGridView1.Rows[RowIndex - 1].Cells[ColumnIndex].Value.Equals("20") || dataGridView1.Rows[RowIndex - 1].Cells[ColumnIndex].Value.Equals("3B"))
+      //
+      //                                     if (dataGridView1.Rows[RowIndex - 6].Cells[ColumnIndex + 1].Value.Equals("04") || dataGridView1.Rows[RowIndex - 6].Cells[ColumnIndex + 1].Value.Equals("10") || dataGridView1.Rows[RowIndex - 6].Cells[ColumnIndex + 1].Value.Equals("11") || dataGridView1.Rows[RowIndex - 6].Cells[ColumnIndex + 1].Value.Equals("20") || dataGridView1.Rows[RowIndex - 6].Cells[ColumnIndex + 1].Value.Equals("3B"))
+      //                                       if (dataGridView1.Rows[RowIndex - 5].Cells[ColumnIndex + 1].Value.Equals("04") || dataGridView1.Rows[RowIndex - 5].Cells[ColumnIndex + 1].Value.Equals("10") || dataGridView1.Rows[RowIndex - 5].Cells[ColumnIndex + 1].Value.Equals("11") || dataGridView1.Rows[RowIndex - 5].Cells[ColumnIndex + 1].Value.Equals("20") || dataGridView1.Rows[RowIndex - 5].Cells[ColumnIndex + 1].Value.Equals("3B"))
+      //                                         if (dataGridView1.Rows[RowIndex - 4].Cells[ColumnIndex + 1].Value.Equals("04") || dataGridView1.Rows[RowIndex - 4].Cells[ColumnIndex + 1].Value.Equals("10") || dataGridView1.Rows[RowIndex - 4].Cells[ColumnIndex + 1].Value.Equals("11") || dataGridView1.Rows[RowIndex - 4].Cells[ColumnIndex + 1].Value.Equals("20") || dataGridView1.Rows[RowIndex - 4].Cells[ColumnIndex + 1].Value.Equals("3B"))
+      //                                           if (dataGridView1.Rows[RowIndex - 3].Cells[ColumnIndex + 1].Value.Equals("04") || dataGridView1.Rows[RowIndex - 3].Cells[ColumnIndex + 1].Value.Equals("10") || dataGridView1.Rows[RowIndex - 3].Cells[ColumnIndex + 1].Value.Equals("11") || dataGridView1.Rows[RowIndex - 3].Cells[ColumnIndex + 1].Value.Equals("20") || dataGridView1.Rows[RowIndex - 3].Cells[ColumnIndex + 1].Value.Equals("3B"))
+      //                                             if (dataGridView1.Rows[RowIndex - 2].Cells[ColumnIndex + 1].Value.Equals("04") || dataGridView1.Rows[RowIndex - 2].Cells[ColumnIndex + 1].Value.Equals("10") || dataGridView1.Rows[RowIndex - 2].Cells[ColumnIndex + 1].Value.Equals("11") || dataGridView1.Rows[RowIndex - 2].Cells[ColumnIndex + 1].Value.Equals("20") || dataGridView1.Rows[RowIndex - 2].Cells[ColumnIndex + 1].Value.Equals("3B"))
+      //
+      //                                               if (dataGridView1.Rows[RowIndex - 4].Cells[ColumnIndex + 2].Value.Equals("04") || dataGridView1.Rows[RowIndex - 4].Cells[ColumnIndex + 2].Value.Equals("10") || dataGridView1.Rows[RowIndex - 4].Cells[ColumnIndex + 2].Value.Equals("11") || dataGridView1.Rows[RowIndex - 4].Cells[ColumnIndex + 2].Value.Equals("20") || dataGridView1.Rows[RowIndex - 4].Cells[ColumnIndex + 2].Value.Equals("3B"))
+      //
+      //                                                 if (dataGridView1.Rows[RowIndex].Cells[ColumnIndex].Value.Equals("04") || dataGridView1.Rows[RowIndex].Cells[ColumnIndex].Value.Equals("10") || dataGridView1.Rows[RowIndex].Cells[ColumnIndex].Value.Equals("11") || dataGridView1.Rows[RowIndex].Cells[ColumnIndex].Value.Equals("20"))
+      //                                                   if (dataGridView1.Rows[RowIndex + 1].Cells[ColumnIndex].Value.Equals("03"))
+      //                                                     dataGridView1.Rows[RowIndex].Cells[ColumnIndex].Value = "3B";
+      //     // arbeitsplatz alles reihe unten
+      //     for (int ColumnIndex = 3; ColumnIndex < 125; ColumnIndex += 1)
+      //       for (int RowIndex = 4; RowIndex < 216; RowIndex += 1)
+      //
+      //         if (dataGridView1.Rows[RowIndex + 4].Cells[ColumnIndex - 2].Value.Equals("04") || dataGridView1.Rows[RowIndex + 4].Cells[ColumnIndex - 2].Value.Equals("10") || dataGridView1.Rows[RowIndex + 4].Cells[ColumnIndex - 2].Value.Equals("11") || dataGridView1.Rows[RowIndex + 4].Cells[ColumnIndex - 2].Value.Equals("20") || dataGridView1.Rows[RowIndex + 4].Cells[ColumnIndex - 2].Value.Equals("3B"))
+      //
+      //           if (dataGridView1.Rows[RowIndex + 6].Cells[ColumnIndex - 1].Value.Equals("04") || dataGridView1.Rows[RowIndex + 6].Cells[ColumnIndex - 1].Value.Equals("10") || dataGridView1.Rows[RowIndex + 6].Cells[ColumnIndex - 1].Value.Equals("11") || dataGridView1.Rows[RowIndex + 6].Cells[ColumnIndex - 1].Value.Equals("20") || dataGridView1.Rows[RowIndex + 6].Cells[ColumnIndex - 1].Value.Equals("3B"))
+      //             if (dataGridView1.Rows[RowIndex + 5].Cells[ColumnIndex - 1].Value.Equals("04") || dataGridView1.Rows[RowIndex + 5].Cells[ColumnIndex - 1].Value.Equals("10") || dataGridView1.Rows[RowIndex + 5].Cells[ColumnIndex - 1].Value.Equals("11") || dataGridView1.Rows[RowIndex + 5].Cells[ColumnIndex - 1].Value.Equals("20") || dataGridView1.Rows[RowIndex + 5].Cells[ColumnIndex - 1].Value.Equals("3B"))
+      //               if (dataGridView1.Rows[RowIndex + 4].Cells[ColumnIndex - 1].Value.Equals("04") || dataGridView1.Rows[RowIndex + 4].Cells[ColumnIndex - 1].Value.Equals("10") || dataGridView1.Rows[RowIndex + 4].Cells[ColumnIndex - 1].Value.Equals("11") || dataGridView1.Rows[RowIndex + 4].Cells[ColumnIndex - 1].Value.Equals("20") || dataGridView1.Rows[RowIndex + 4].Cells[ColumnIndex - 1].Value.Equals("3B"))
+      //                 if (dataGridView1.Rows[RowIndex + 3].Cells[ColumnIndex - 1].Value.Equals("04") || dataGridView1.Rows[RowIndex + 3].Cells[ColumnIndex - 1].Value.Equals("10") || dataGridView1.Rows[RowIndex + 3].Cells[ColumnIndex - 1].Value.Equals("11") || dataGridView1.Rows[RowIndex + 3].Cells[ColumnIndex - 1].Value.Equals("20") || dataGridView1.Rows[RowIndex + 3].Cells[ColumnIndex - 1].Value.Equals("3B"))
+      //                   if (dataGridView1.Rows[RowIndex + 2].Cells[ColumnIndex - 1].Value.Equals("04") || dataGridView1.Rows[RowIndex + 2].Cells[ColumnIndex - 1].Value.Equals("10") || dataGridView1.Rows[RowIndex + 2].Cells[ColumnIndex - 1].Value.Equals("11") || dataGridView1.Rows[RowIndex + 2].Cells[ColumnIndex - 1].Value.Equals("20") || dataGridView1.Rows[RowIndex + 2].Cells[ColumnIndex - 1].Value.Equals("3B"))
+      //
+      //                     if (dataGridView1.Rows[RowIndex + 7].Cells[ColumnIndex].Value.Equals("04") || dataGridView1.Rows[RowIndex + 7].Cells[ColumnIndex].Value.Equals("10") || dataGridView1.Rows[RowIndex + 7].Cells[ColumnIndex].Value.Equals("11") || dataGridView1.Rows[RowIndex + 7].Cells[ColumnIndex].Value.Equals("20") || dataGridView1.Rows[RowIndex + 7].Cells[ColumnIndex].Value.Equals("3B"))
+      //                       if (dataGridView1.Rows[RowIndex + 6].Cells[ColumnIndex].Value.Equals("04") || dataGridView1.Rows[RowIndex + 6].Cells[ColumnIndex].Value.Equals("10") || dataGridView1.Rows[RowIndex + 6].Cells[ColumnIndex].Value.Equals("11") || dataGridView1.Rows[RowIndex + 6].Cells[ColumnIndex].Value.Equals("20") || dataGridView1.Rows[RowIndex + 6].Cells[ColumnIndex].Value.Equals("3B"))
+      //                         if (dataGridView1.Rows[RowIndex + 5].Cells[ColumnIndex].Value.Equals("04") || dataGridView1.Rows[RowIndex + 5].Cells[ColumnIndex].Value.Equals("10") || dataGridView1.Rows[RowIndex + 5].Cells[ColumnIndex].Value.Equals("11") || dataGridView1.Rows[RowIndex + 5].Cells[ColumnIndex].Value.Equals("20") || dataGridView1.Rows[RowIndex + 5].Cells[ColumnIndex].Value.Equals("3B"))
+      //                           if (dataGridView1.Rows[RowIndex + 4].Cells[ColumnIndex].Value.Equals("04") || dataGridView1.Rows[RowIndex + 4].Cells[ColumnIndex].Value.Equals("10") || dataGridView1.Rows[RowIndex + 4].Cells[ColumnIndex].Value.Equals("11") || dataGridView1.Rows[RowIndex + 4].Cells[ColumnIndex].Value.Equals("20") || dataGridView1.Rows[RowIndex + 4].Cells[ColumnIndex].Value.Equals("3B"))
+      //                             if (dataGridView1.Rows[RowIndex + 3].Cells[ColumnIndex].Value.Equals("04") || dataGridView1.Rows[RowIndex + 3].Cells[ColumnIndex].Value.Equals("10") || dataGridView1.Rows[RowIndex + 3].Cells[ColumnIndex].Value.Equals("11") || dataGridView1.Rows[RowIndex + 3].Cells[ColumnIndex].Value.Equals("20") || dataGridView1.Rows[RowIndex + 3].Cells[ColumnIndex].Value.Equals("3B"))
+      //                               if (dataGridView1.Rows[RowIndex + 2].Cells[ColumnIndex].Value.Equals("04") || dataGridView1.Rows[RowIndex + 2].Cells[ColumnIndex].Value.Equals("10") || dataGridView1.Rows[RowIndex + 2].Cells[ColumnIndex].Value.Equals("11") || dataGridView1.Rows[RowIndex + 2].Cells[ColumnIndex].Value.Equals("20") || dataGridView1.Rows[RowIndex + 2].Cells[ColumnIndex].Value.Equals("3B"))
+      //                                 if (dataGridView1.Rows[RowIndex + 1].Cells[ColumnIndex].Value.Equals("04") || dataGridView1.Rows[RowIndex + 1].Cells[ColumnIndex].Value.Equals("10") || dataGridView1.Rows[RowIndex + 1].Cells[ColumnIndex].Value.Equals("11") || dataGridView1.Rows[RowIndex + 1].Cells[ColumnIndex].Value.Equals("20") || dataGridView1.Rows[RowIndex + 1].Cells[ColumnIndex].Value.Equals("3B"))
+      //                                   if (dataGridView1.Rows[RowIndex].Cells[ColumnIndex].Value.Equals("04") || dataGridView1.Rows[RowIndex].Cells[ColumnIndex].Value.Equals("10") || dataGridView1.Rows[RowIndex].Cells[ColumnIndex].Value.Equals("11") || dataGridView1.Rows[RowIndex].Cells[ColumnIndex].Value.Equals("20") || dataGridView1.Rows[RowIndex].Cells[ColumnIndex].Value.Equals("3B"))
+      //
+      //                                     if (dataGridView1.Rows[RowIndex + 6].Cells[ColumnIndex + 1].Value.Equals("04") || dataGridView1.Rows[RowIndex + 6].Cells[ColumnIndex + 1].Value.Equals("10") || dataGridView1.Rows[RowIndex + 6].Cells[ColumnIndex + 1].Value.Equals("11") || dataGridView1.Rows[RowIndex + 6].Cells[ColumnIndex + 1].Value.Equals("20") || dataGridView1.Rows[RowIndex + 6].Cells[ColumnIndex + 1].Value.Equals("3B"))
+      //                                       if (dataGridView1.Rows[RowIndex + 5].Cells[ColumnIndex + 1].Value.Equals("04") || dataGridView1.Rows[RowIndex + 5].Cells[ColumnIndex + 1].Value.Equals("10") || dataGridView1.Rows[RowIndex + 5].Cells[ColumnIndex + 1].Value.Equals("11") || dataGridView1.Rows[RowIndex + 5].Cells[ColumnIndex + 1].Value.Equals("20") || dataGridView1.Rows[RowIndex + 5].Cells[ColumnIndex + 1].Value.Equals("3B"))
+      //                                         if (dataGridView1.Rows[RowIndex + 4].Cells[ColumnIndex + 1].Value.Equals("04") || dataGridView1.Rows[RowIndex + 4].Cells[ColumnIndex + 1].Value.Equals("10") || dataGridView1.Rows[RowIndex + 4].Cells[ColumnIndex + 1].Value.Equals("11") || dataGridView1.Rows[RowIndex + 4].Cells[ColumnIndex + 1].Value.Equals("20") || dataGridView1.Rows[RowIndex + 4].Cells[ColumnIndex + 1].Value.Equals("3B"))
+      //                                           if (dataGridView1.Rows[RowIndex + 3].Cells[ColumnIndex + 1].Value.Equals("04") || dataGridView1.Rows[RowIndex + 3].Cells[ColumnIndex + 1].Value.Equals("10") || dataGridView1.Rows[RowIndex + 3].Cells[ColumnIndex + 1].Value.Equals("11") || dataGridView1.Rows[RowIndex + 3].Cells[ColumnIndex + 1].Value.Equals("20") || dataGridView1.Rows[RowIndex + 3].Cells[ColumnIndex + 1].Value.Equals("3B"))
+      //                                             if (dataGridView1.Rows[RowIndex + 2].Cells[ColumnIndex + 1].Value.Equals("04") || dataGridView1.Rows[RowIndex + 2].Cells[ColumnIndex + 1].Value.Equals("10") || dataGridView1.Rows[RowIndex + 2].Cells[ColumnIndex + 1].Value.Equals("11") || dataGridView1.Rows[RowIndex + 2].Cells[ColumnIndex + 1].Value.Equals("20") || dataGridView1.Rows[RowIndex + 2].Cells[ColumnIndex + 1].Value.Equals("3B"))
+      //
+      //                                               if (dataGridView1.Rows[RowIndex + 4].Cells[ColumnIndex + 2].Value.Equals("04") || dataGridView1.Rows[RowIndex + 4].Cells[ColumnIndex + 2].Value.Equals("10") || dataGridView1.Rows[RowIndex + 4].Cells[ColumnIndex + 2].Value.Equals("11") || dataGridView1.Rows[RowIndex + 4].Cells[ColumnIndex + 2].Value.Equals("20") || dataGridView1.Rows[RowIndex + 4].Cells[ColumnIndex + 2].Value.Equals("3B"))
+      //
+      //                                                 if (dataGridView1.Rows[RowIndex + 8].Cells[ColumnIndex].Value.Equals("04") || dataGridView1.Rows[RowIndex + 8].Cells[ColumnIndex].Value.Equals("10") || dataGridView1.Rows[RowIndex + 8].Cells[ColumnIndex].Value.Equals("11") || dataGridView1.Rows[RowIndex + 8].Cells[ColumnIndex].Value.Equals("20"))
+      //                                                   if (dataGridView1.Rows[RowIndex - 1].Cells[ColumnIndex].Value.Equals("03"))
+      //                                                     dataGridView1.Rows[RowIndex + 8].Cells[ColumnIndex].Value = "3B";
+
+      //// äußerste straße gehweg entfernen => Achtung - man kann keine Brunnen dort mehr bauen!
+      //for (int ColumnIndex = 1; ColumnIndex < 127; ColumnIndex += 1)
+      //  for (int RowIndex = 2; RowIndex < 224; RowIndex += 1)
+      //    if (dataGridView1.Rows[RowIndex].Cells[ColumnIndex].Value.Equals("04"))
+      //      dataGridView1.Rows[RowIndex].Cells[ColumnIndex].Value = "A0";
+
+      //// äußerste mauer blockieren => sobald 20 gebäude in dem äußersten gebiet gebaut werden, will der rat alle 15 Tage die Stadtmauer erweitern
+      //for (int ColumnIndex = 1; ColumnIndex < 127; ColumnIndex++)
+      //  for (int RowIndex = 1; RowIndex < 225; RowIndex++)
+      //    if (dataGridView1.Rows[RowIndex].Cells[ColumnIndex].Value.Equals("10"))
+      //      if (dataGridView1.Rows[RowIndex].Cells[ColumnIndex + 1].Value.Equals("09") || dataGridView1.Rows[RowIndex].Cells[ColumnIndex + 1].Value.Equals("11")
+      //        || dataGridView1.Rows[RowIndex - 1].Cells[ColumnIndex + 1].Value.Equals("09") || dataGridView1.Rows[RowIndex - 1].Cells[ColumnIndex + 1].Value.Equals("11")
+      //        || dataGridView1.Rows[RowIndex - 1].Cells[ColumnIndex - 1].Value.Equals("09") || dataGridView1.Rows[RowIndex - 1].Cells[ColumnIndex - 1].Value.Equals("11")
+      //        || dataGridView1.Rows[RowIndex + 1].Cells[ColumnIndex - 1].Value.Equals("09") || dataGridView1.Rows[RowIndex + 1].Cells[ColumnIndex - 1].Value.Equals("11")
+      //        || dataGridView1.Rows[RowIndex - 1].Cells[ColumnIndex].Value.Equals("09") || dataGridView1.Rows[RowIndex - 1].Cells[ColumnIndex].Value.Equals("11")
+      //        || dataGridView1.Rows[RowIndex + 1].Cells[ColumnIndex].Value.Equals("09") || dataGridView1.Rows[RowIndex + 1].Cells[ColumnIndex].Value.Equals("11")
+      //        || dataGridView1.Rows[RowIndex + 1].Cells[ColumnIndex + 1].Value.Equals("09") || dataGridView1.Rows[RowIndex + 1].Cells[ColumnIndex + 1].Value.Equals("11") 
+      //        || dataGridView1.Rows[RowIndex].Cells[ColumnIndex - 1].Value.Equals("09") || dataGridView1.Rows[RowIndex].Cells[ColumnIndex - 1].Value.Equals("11"))
+      //      dataGridView1.Rows[RowIndex].Cells[ColumnIndex].Value = "06";
+
+      // arbeitsplatz alles
       for (int ColumnIndex = 3; ColumnIndex < 125; ColumnIndex += 1)
-        for (int RowIndex = 10; RowIndex < 222; RowIndex += 1)
+        for (int RowIndex = 8; RowIndex < 224; RowIndex += 1)
 
           if (dataGridView1.Rows[RowIndex - 4].Cells[ColumnIndex - 2].Value.Equals("04") || dataGridView1.Rows[RowIndex - 4].Cells[ColumnIndex - 2].Value.Equals("10") || dataGridView1.Rows[RowIndex - 4].Cells[ColumnIndex - 2].Value.Equals("11") || dataGridView1.Rows[RowIndex - 4].Cells[ColumnIndex - 2].Value.Equals("20") || dataGridView1.Rows[RowIndex - 4].Cells[ColumnIndex - 2].Value.Equals("3B"))
 
@@ -438,49 +617,17 @@ namespace PatrizierKartenEditor
                                                 if (dataGridView1.Rows[RowIndex - 4].Cells[ColumnIndex + 2].Value.Equals("04") || dataGridView1.Rows[RowIndex - 4].Cells[ColumnIndex + 2].Value.Equals("10") || dataGridView1.Rows[RowIndex - 4].Cells[ColumnIndex + 2].Value.Equals("11") || dataGridView1.Rows[RowIndex - 4].Cells[ColumnIndex + 2].Value.Equals("20") || dataGridView1.Rows[RowIndex - 4].Cells[ColumnIndex + 2].Value.Equals("3B"))
 
                                                   if (dataGridView1.Rows[RowIndex].Cells[ColumnIndex].Value.Equals("04") || dataGridView1.Rows[RowIndex].Cells[ColumnIndex].Value.Equals("10") || dataGridView1.Rows[RowIndex].Cells[ColumnIndex].Value.Equals("11") || dataGridView1.Rows[RowIndex].Cells[ColumnIndex].Value.Equals("20"))
-                                                    if (dataGridView1.Rows[RowIndex + 1].Cells[ColumnIndex].Value.Equals("03"))
-                                                      dataGridView1.Rows[RowIndex].Cells[ColumnIndex].Value = "3B";
-      // arbeitsplatz alles reihe unten2
-      for (int ColumnIndex = 3; ColumnIndex < 125; ColumnIndex += 1)
-        for (int RowIndex = 4; RowIndex < 216; RowIndex += 1)
+                                                    dataGridView1.Rows[RowIndex].Cells[ColumnIndex].Value = "3B";
+      //// äußerste straße entfernen => Achtung - man kann den Feldweg nicht mehr upgraden!
+      //for (int ColumnIndex = 0; ColumnIndex < 128; ColumnIndex++)
+      //  for (int RowIndex = 0; RowIndex < 226; RowIndex++)
+      //    if (dataGridView1.Rows[RowIndex].Cells[ColumnIndex].Value.Equals("03"))
+      //      dataGridView1.Rows[RowIndex].Cells[ColumnIndex].Value = "0D";
 
-          if (dataGridView1.Rows[RowIndex + 4].Cells[ColumnIndex - 2].Value.Equals("04") || dataGridView1.Rows[RowIndex + 4].Cells[ColumnIndex - 2].Value.Equals("10") || dataGridView1.Rows[RowIndex + 4].Cells[ColumnIndex - 2].Value.Equals("11") || dataGridView1.Rows[RowIndex + 4].Cells[ColumnIndex - 2].Value.Equals("20") || dataGridView1.Rows[RowIndex + 4].Cells[ColumnIndex - 2].Value.Equals("3B"))
-
-            if (dataGridView1.Rows[RowIndex + 6].Cells[ColumnIndex - 1].Value.Equals("04") || dataGridView1.Rows[RowIndex + 6].Cells[ColumnIndex - 1].Value.Equals("10") || dataGridView1.Rows[RowIndex + 6].Cells[ColumnIndex - 1].Value.Equals("11") || dataGridView1.Rows[RowIndex + 6].Cells[ColumnIndex - 1].Value.Equals("20") || dataGridView1.Rows[RowIndex + 6].Cells[ColumnIndex - 1].Value.Equals("3B"))
-              if (dataGridView1.Rows[RowIndex + 5].Cells[ColumnIndex - 1].Value.Equals("04") || dataGridView1.Rows[RowIndex + 5].Cells[ColumnIndex - 1].Value.Equals("10") || dataGridView1.Rows[RowIndex + 5].Cells[ColumnIndex - 1].Value.Equals("11") || dataGridView1.Rows[RowIndex + 5].Cells[ColumnIndex - 1].Value.Equals("20") || dataGridView1.Rows[RowIndex + 5].Cells[ColumnIndex - 1].Value.Equals("3B"))
-                if (dataGridView1.Rows[RowIndex + 4].Cells[ColumnIndex - 1].Value.Equals("04") || dataGridView1.Rows[RowIndex + 4].Cells[ColumnIndex - 1].Value.Equals("10") || dataGridView1.Rows[RowIndex + 4].Cells[ColumnIndex - 1].Value.Equals("11") || dataGridView1.Rows[RowIndex + 4].Cells[ColumnIndex - 1].Value.Equals("20") || dataGridView1.Rows[RowIndex + 4].Cells[ColumnIndex - 1].Value.Equals("3B"))
-                  if (dataGridView1.Rows[RowIndex + 3].Cells[ColumnIndex - 1].Value.Equals("04") || dataGridView1.Rows[RowIndex + 3].Cells[ColumnIndex - 1].Value.Equals("10") || dataGridView1.Rows[RowIndex + 3].Cells[ColumnIndex - 1].Value.Equals("11") || dataGridView1.Rows[RowIndex + 3].Cells[ColumnIndex - 1].Value.Equals("20") || dataGridView1.Rows[RowIndex + 3].Cells[ColumnIndex - 1].Value.Equals("3B"))
-                    if (dataGridView1.Rows[RowIndex + 2].Cells[ColumnIndex - 1].Value.Equals("04") || dataGridView1.Rows[RowIndex + 2].Cells[ColumnIndex - 1].Value.Equals("10") || dataGridView1.Rows[RowIndex + 2].Cells[ColumnIndex - 1].Value.Equals("11") || dataGridView1.Rows[RowIndex + 2].Cells[ColumnIndex - 1].Value.Equals("20") || dataGridView1.Rows[RowIndex + 2].Cells[ColumnIndex - 1].Value.Equals("3B"))
-
-                      if (dataGridView1.Rows[RowIndex + 7].Cells[ColumnIndex].Value.Equals("04") || dataGridView1.Rows[RowIndex + 7].Cells[ColumnIndex].Value.Equals("10") || dataGridView1.Rows[RowIndex + 7].Cells[ColumnIndex].Value.Equals("11") || dataGridView1.Rows[RowIndex + 7].Cells[ColumnIndex].Value.Equals("20") || dataGridView1.Rows[RowIndex + 7].Cells[ColumnIndex].Value.Equals("3B"))
-                        if (dataGridView1.Rows[RowIndex + 6].Cells[ColumnIndex].Value.Equals("04") || dataGridView1.Rows[RowIndex + 6].Cells[ColumnIndex].Value.Equals("10") || dataGridView1.Rows[RowIndex + 6].Cells[ColumnIndex].Value.Equals("11") || dataGridView1.Rows[RowIndex + 6].Cells[ColumnIndex].Value.Equals("20") || dataGridView1.Rows[RowIndex + 6].Cells[ColumnIndex].Value.Equals("3B"))
-                          if (dataGridView1.Rows[RowIndex + 5].Cells[ColumnIndex].Value.Equals("04") || dataGridView1.Rows[RowIndex + 5].Cells[ColumnIndex].Value.Equals("10") || dataGridView1.Rows[RowIndex + 5].Cells[ColumnIndex].Value.Equals("11") || dataGridView1.Rows[RowIndex + 5].Cells[ColumnIndex].Value.Equals("20") || dataGridView1.Rows[RowIndex + 5].Cells[ColumnIndex].Value.Equals("3B"))
-                            if (dataGridView1.Rows[RowIndex + 4].Cells[ColumnIndex].Value.Equals("04") || dataGridView1.Rows[RowIndex + 4].Cells[ColumnIndex].Value.Equals("10") || dataGridView1.Rows[RowIndex + 4].Cells[ColumnIndex].Value.Equals("11") || dataGridView1.Rows[RowIndex + 4].Cells[ColumnIndex].Value.Equals("20") || dataGridView1.Rows[RowIndex + 4].Cells[ColumnIndex].Value.Equals("3B"))
-                              if (dataGridView1.Rows[RowIndex + 3].Cells[ColumnIndex].Value.Equals("04") || dataGridView1.Rows[RowIndex + 3].Cells[ColumnIndex].Value.Equals("10") || dataGridView1.Rows[RowIndex + 3].Cells[ColumnIndex].Value.Equals("11") || dataGridView1.Rows[RowIndex + 3].Cells[ColumnIndex].Value.Equals("20") || dataGridView1.Rows[RowIndex + 3].Cells[ColumnIndex].Value.Equals("3B"))
-                                if (dataGridView1.Rows[RowIndex + 2].Cells[ColumnIndex].Value.Equals("04") || dataGridView1.Rows[RowIndex + 2].Cells[ColumnIndex].Value.Equals("10") || dataGridView1.Rows[RowIndex + 2].Cells[ColumnIndex].Value.Equals("11") || dataGridView1.Rows[RowIndex + 2].Cells[ColumnIndex].Value.Equals("20") || dataGridView1.Rows[RowIndex + 2].Cells[ColumnIndex].Value.Equals("3B"))
-                                  if (dataGridView1.Rows[RowIndex + 1].Cells[ColumnIndex].Value.Equals("04") || dataGridView1.Rows[RowIndex + 1].Cells[ColumnIndex].Value.Equals("10") || dataGridView1.Rows[RowIndex + 1].Cells[ColumnIndex].Value.Equals("11") || dataGridView1.Rows[RowIndex + 1].Cells[ColumnIndex].Value.Equals("20") || dataGridView1.Rows[RowIndex + 1].Cells[ColumnIndex].Value.Equals("3B"))
-                                    if (dataGridView1.Rows[RowIndex].Cells[ColumnIndex].Value.Equals("04") || dataGridView1.Rows[RowIndex].Cells[ColumnIndex].Value.Equals("10") || dataGridView1.Rows[RowIndex].Cells[ColumnIndex].Value.Equals("11") || dataGridView1.Rows[RowIndex].Cells[ColumnIndex].Value.Equals("20") || dataGridView1.Rows[RowIndex].Cells[ColumnIndex].Value.Equals("3B"))
-
-                                      if (dataGridView1.Rows[RowIndex + 6].Cells[ColumnIndex + 1].Value.Equals("04") || dataGridView1.Rows[RowIndex + 6].Cells[ColumnIndex + 1].Value.Equals("10") || dataGridView1.Rows[RowIndex + 6].Cells[ColumnIndex + 1].Value.Equals("11") || dataGridView1.Rows[RowIndex + 6].Cells[ColumnIndex + 1].Value.Equals("20") || dataGridView1.Rows[RowIndex + 6].Cells[ColumnIndex + 1].Value.Equals("3B"))
-                                        if (dataGridView1.Rows[RowIndex + 5].Cells[ColumnIndex + 1].Value.Equals("04") || dataGridView1.Rows[RowIndex + 5].Cells[ColumnIndex + 1].Value.Equals("10") || dataGridView1.Rows[RowIndex + 5].Cells[ColumnIndex + 1].Value.Equals("11") || dataGridView1.Rows[RowIndex + 5].Cells[ColumnIndex + 1].Value.Equals("20") || dataGridView1.Rows[RowIndex + 5].Cells[ColumnIndex + 1].Value.Equals("3B"))
-                                          if (dataGridView1.Rows[RowIndex + 4].Cells[ColumnIndex + 1].Value.Equals("04") || dataGridView1.Rows[RowIndex + 4].Cells[ColumnIndex + 1].Value.Equals("10") || dataGridView1.Rows[RowIndex + 4].Cells[ColumnIndex + 1].Value.Equals("11") || dataGridView1.Rows[RowIndex + 4].Cells[ColumnIndex + 1].Value.Equals("20") || dataGridView1.Rows[RowIndex + 4].Cells[ColumnIndex + 1].Value.Equals("3B"))
-                                            if (dataGridView1.Rows[RowIndex + 3].Cells[ColumnIndex + 1].Value.Equals("04") || dataGridView1.Rows[RowIndex + 3].Cells[ColumnIndex + 1].Value.Equals("10") || dataGridView1.Rows[RowIndex + 3].Cells[ColumnIndex + 1].Value.Equals("11") || dataGridView1.Rows[RowIndex + 3].Cells[ColumnIndex + 1].Value.Equals("20") || dataGridView1.Rows[RowIndex + 3].Cells[ColumnIndex + 1].Value.Equals("3B"))
-                                              if (dataGridView1.Rows[RowIndex + 2].Cells[ColumnIndex + 1].Value.Equals("04") || dataGridView1.Rows[RowIndex + 2].Cells[ColumnIndex + 1].Value.Equals("10") || dataGridView1.Rows[RowIndex + 2].Cells[ColumnIndex + 1].Value.Equals("11") || dataGridView1.Rows[RowIndex + 2].Cells[ColumnIndex + 1].Value.Equals("20") || dataGridView1.Rows[RowIndex + 2].Cells[ColumnIndex + 1].Value.Equals("3B"))
-
-                                                if (dataGridView1.Rows[RowIndex + 4].Cells[ColumnIndex + 2].Value.Equals("04") || dataGridView1.Rows[RowIndex + 4].Cells[ColumnIndex + 2].Value.Equals("10") || dataGridView1.Rows[RowIndex + 4].Cells[ColumnIndex + 2].Value.Equals("11") || dataGridView1.Rows[RowIndex + 4].Cells[ColumnIndex + 2].Value.Equals("20") || dataGridView1.Rows[RowIndex + 4].Cells[ColumnIndex + 2].Value.Equals("3B"))
-
-                                                  if (dataGridView1.Rows[RowIndex + 8].Cells[ColumnIndex].Value.Equals("04") || dataGridView1.Rows[RowIndex + 8].Cells[ColumnIndex].Value.Equals("10") || dataGridView1.Rows[RowIndex + 8].Cells[ColumnIndex].Value.Equals("11") || dataGridView1.Rows[RowIndex + 8].Cells[ColumnIndex].Value.Equals("20"))
-                                                    if (dataGridView1.Rows[RowIndex - 1].Cells[ColumnIndex].Value.Equals("03"))
-                                                      dataGridView1.Rows[RowIndex + 8].Cells[ColumnIndex].Value = "3B";
-      // äußerstes gebiet bebaubar machen 
+      // äußerstes gebiet bebaubar machen => Achtung - Stadtrat möchte alle 15 Tage die äußerste Stadtmauer erweitern!
       for (int ColumnIndex = 1; ColumnIndex < 127; ColumnIndex += 1)
         for (int RowIndex = 2; RowIndex < 224; RowIndex += 1)
           if (dataGridView1.Rows[RowIndex].Cells[ColumnIndex].Value.Equals("10"))
-            dataGridView1.Rows[RowIndex].Cells[ColumnIndex].Value = "A0";
-      // äußerste straße gehweg entfernen
-      for (int ColumnIndex = 1; ColumnIndex < 127; ColumnIndex += 1)
-        for (int RowIndex = 2; RowIndex < 224; RowIndex += 1)
-          if (dataGridView1.Rows[RowIndex].Cells[ColumnIndex].Value.Equals("04"))
             dataGridView1.Rows[RowIndex].Cells[ColumnIndex].Value = "A0";
     }
   }
