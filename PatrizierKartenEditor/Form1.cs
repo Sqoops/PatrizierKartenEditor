@@ -29,6 +29,20 @@ namespace PatrizierKartenEditor
       InitializeComponent();
       dataGridView1.VirtualMode = true;
       Demo(dataGridView1);
+      if (dataGridView1.ColumnCount == 0)
+      {
+        buttonZoomIn.Enabled = false;
+        buttonZoomOut.Enabled = false;
+        buttonColor.Enabled = false;
+        buttonSave.Enabled = false;
+        buttonZoomOutMuch.Enabled = false;
+        buttonZoomInMuch.Enabled = false;
+        buttonScript.Enabled = false;
+      }
+      this.WindowState = FormWindowState.Minimized;
+      this.Show();
+      this.WindowState = FormWindowState.Normal;
+      //this.WindowState = FormWindowState.Maximized;
     }
     static void Demo(DataGridView dgv)
     {
@@ -94,13 +108,20 @@ namespace PatrizierKartenEditor
 
     private void buttonSave_Click(object sender, EventArgs e)
     {
+      buttonZoomIn.Enabled = false;
+      buttonZoomOut.Enabled = false;
+      buttonColor.Enabled = false;
+      buttonSave.Enabled = false;
+      buttonZoomOutMuch.Enabled = false;
+      buttonZoomInMuch.Enabled = false;
+      buttonScript.Enabled = false;
 
       DataTable dt2 = (DataTable)dataGridView1.DataSource;
       var newfileBytes = new byte[28928];
       int stelle = 0;
-      for (int columnName = 0; columnName < 128; columnName += 1)
+      for (int columnName = 0; columnName < 128; columnName++)
       {
-        for (int rowNum = 0; rowNum < 226; rowNum += 1)
+        for (int rowNum = 0; rowNum < 226; rowNum++)
         {
           newfileBytes[stelle] = (byte)(Convert.ToInt32(dt2.Rows[rowNum][columnName].ToString(), 16));
           stelle++;
@@ -112,10 +133,26 @@ namespace PatrizierKartenEditor
       newfileBytes.CopyTo(merged, metadata.Length);
       fileBytes = merged;
       File.WriteAllBytes(fileNamep, fileBytes);
+
+      buttonZoomIn.Enabled = true;
+      buttonZoomOut.Enabled = true;
+      buttonColor.Enabled = true;
+      buttonSave.Enabled = true;
+      buttonZoomOutMuch.Enabled = true;
+      buttonZoomInMuch.Enabled = true;
+      buttonScript.Enabled = true;
     }
 
     private void buttonColor_Click(object sender, EventArgs e)
     {
+      buttonZoomIn.Enabled = false;
+      buttonZoomOut.Enabled = false;
+      buttonColor.Enabled = false;
+      buttonSave.Enabled = false;
+      buttonZoomOutMuch.Enabled = false;
+      buttonZoomInMuch.Enabled = false;
+      buttonScript.Enabled = false;
+
       int stelle2 = 0;
       for (int ColumnIndex = 0; ColumnIndex < 128; ColumnIndex += 1)
       {
@@ -162,10 +199,26 @@ namespace PatrizierKartenEditor
           stelle2++;
         }
       }
+
+      buttonZoomIn.Enabled = true;
+      buttonZoomOut.Enabled = true;
+      buttonColor.Enabled = true;
+      buttonSave.Enabled = true;
+      buttonZoomOutMuch.Enabled = true;
+      buttonZoomInMuch.Enabled = true;
+      buttonScript.Enabled = true;
     }
 
     private void buttonZoomOut_Click(object sender, EventArgs e)
     {
+      buttonZoomIn.Enabled = false;
+      buttonZoomOut.Enabled = false;
+      buttonColor.Enabled = false;
+      buttonSave.Enabled = false;
+      buttonZoomOutMuch.Enabled = false;
+      buttonZoomInMuch.Enabled = false;
+      buttonScript.Enabled = false;
+
       foreach (DataGridViewRow row in dataGridView1.Rows)
         row.Height = (int)(row.Height - 1);
       foreach (DataGridViewColumn col in dataGridView1.Columns)
@@ -173,10 +226,26 @@ namespace PatrizierKartenEditor
       float width2 = dataGridView1.Columns.GetFirstColumn(DataGridViewElementStates.Visible).Width;
       float width3 = width2 / 2.4f;
       dataGridView1.RowsDefaultCellStyle.Font = new Font("Arial", width3, GraphicsUnit.Pixel);
+
+      buttonZoomIn.Enabled = true;
+      buttonZoomOut.Enabled = true;
+      buttonColor.Enabled = true;
+      buttonSave.Enabled = true;
+      buttonZoomOutMuch.Enabled = true;
+      buttonZoomInMuch.Enabled = true;
+      buttonScript.Enabled = true;
     }
 
     private void buttonZoomIn_Click(object sender, EventArgs e)
     {
+      buttonZoomIn.Enabled = false;
+      buttonZoomOut.Enabled = false;
+      buttonColor.Enabled = false;
+      buttonSave.Enabled = false;
+      buttonZoomOutMuch.Enabled = false;
+      buttonZoomInMuch.Enabled = false;
+      buttonScript.Enabled = false;
+
       foreach (DataGridViewRow row in dataGridView1.Rows)
       {
         row.Height = (int)(row.Height + 1);
@@ -186,10 +255,26 @@ namespace PatrizierKartenEditor
       float width2 = dataGridView1.Columns.GetFirstColumn(DataGridViewElementStates.Visible).Width;
       float width3 = width2 / 2.4f;
       dataGridView1.RowsDefaultCellStyle.Font = new Font("Arial", width3, GraphicsUnit.Pixel);
+
+      buttonZoomIn.Enabled = true;
+      buttonZoomOut.Enabled = true;
+      buttonColor.Enabled = true;
+      buttonSave.Enabled = true;
+      buttonZoomOutMuch.Enabled = true;
+      buttonZoomInMuch.Enabled = true;
+      buttonScript.Enabled = true;
     }
 
     private void buttonZoomOutMuch_Click(object sender, EventArgs e)
     {
+      buttonZoomIn.Enabled = false;
+      buttonZoomOut.Enabled = false;
+      buttonColor.Enabled = false;
+      buttonSave.Enabled = false;
+      buttonZoomOutMuch.Enabled = false;
+      buttonZoomInMuch.Enabled = false;
+      buttonScript.Enabled = false;
+
       foreach (DataGridViewRow row in dataGridView1.Rows)
         row.Height = (int)(row.Height - 5);
       foreach (DataGridViewColumn col in dataGridView1.Columns)
@@ -197,10 +282,26 @@ namespace PatrizierKartenEditor
       float width2 = dataGridView1.Columns.GetFirstColumn(DataGridViewElementStates.Visible).Width;
       float width3 = width2 / 2.4f;
       dataGridView1.RowsDefaultCellStyle.Font = new Font("Arial", width3, GraphicsUnit.Pixel);
+
+      buttonZoomIn.Enabled = true;
+      buttonZoomOut.Enabled = true;
+      buttonColor.Enabled = true;
+      buttonSave.Enabled = true;
+      buttonZoomOutMuch.Enabled = true;
+      buttonZoomInMuch.Enabled = true;
+      buttonScript.Enabled = true;
     }
 
     private void buttonZoomInMuch_Click(object sender, EventArgs e)
     {
+      buttonZoomIn.Enabled = false;
+      buttonZoomOut.Enabled = false;
+      buttonColor.Enabled = false;
+      buttonSave.Enabled = false;
+      buttonZoomOutMuch.Enabled = false;
+      buttonZoomInMuch.Enabled = false;
+      buttonScript.Enabled = false;
+
       foreach (DataGridViewRow row in dataGridView1.Rows)
         row.Height = (int)(row.Height + 5);
       foreach (DataGridViewColumn col in dataGridView1.Columns)
@@ -208,35 +309,51 @@ namespace PatrizierKartenEditor
       float width2 = dataGridView1.Columns.GetFirstColumn(DataGridViewElementStates.Visible).Width;
       float width3 = width2 / 2.4f;
       dataGridView1.RowsDefaultCellStyle.Font = new Font("Arial", width3, GraphicsUnit.Pixel);
+
+      buttonZoomIn.Enabled = true;
+      buttonZoomOut.Enabled = true;
+      buttonColor.Enabled = true;
+      buttonSave.Enabled = true;
+      buttonZoomOutMuch.Enabled = true;
+      buttonZoomInMuch.Enabled = true;
+      buttonScript.Enabled = true;
     }
 
     //  max ColumnIndex: 128
     //  max RowIndex: 226
     private void buttonScript_Click(object sender, EventArgs e)
     {
+      buttonZoomIn.Enabled = false;
+      buttonZoomOut.Enabled = false;
+      buttonColor.Enabled = false;
+      buttonSave.Enabled = false;
+      buttonZoomOutMuch.Enabled = false;
+      buttonZoomInMuch.Enabled = false;
+      buttonScript.Enabled = false;
+
       // clear stuff
-      for (int ColumnIndex = 1; ColumnIndex < 127; ColumnIndex += 1)
-        for (int RowIndex = 3; RowIndex < 223; RowIndex += 1)
+      for (int ColumnIndex = 1; ColumnIndex < 127; ColumnIndex++)
+        for (int RowIndex = 3; RowIndex < 226; RowIndex++)
         {
-          // clear fischereien
-          if (dataGridView1.Rows[RowIndex].Cells[ColumnIndex].Value.Equals("0E"))
-          {
-            dataGridView1.Rows[RowIndex].Cells[ColumnIndex].Value = "0C";
-            if (dataGridView1.Rows[RowIndex - 1].Cells[ColumnIndex - 1].Value.Equals("1E"))
-              dataGridView1.Rows[RowIndex - 1].Cells[ColumnIndex - 1].Value = "0C";
-            if (dataGridView1.Rows[RowIndex - 1].Cells[ColumnIndex].Value.Equals("1E"))
-              dataGridView1.Rows[RowIndex - 1].Cells[ColumnIndex].Value = "0C";
-            if (dataGridView1.Rows[RowIndex - 2].Cells[ColumnIndex].Value.Equals("1E"))
-              dataGridView1.Rows[RowIndex - 2].Cells[ColumnIndex].Value = "0C";
-            if (dataGridView1.Rows[RowIndex - 3].Cells[ColumnIndex].Value.Equals("1E"))
-              dataGridView1.Rows[RowIndex - 3].Cells[ColumnIndex].Value = "0C";
-            if (dataGridView1.Rows[RowIndex - 1].Cells[ColumnIndex + 1].Value.Equals("1E"))
-              dataGridView1.Rows[RowIndex - 1].Cells[ColumnIndex + 1].Value = "0C";
-            if (dataGridView1.Rows[RowIndex - 2].Cells[ColumnIndex + 1].Value.Equals("1E"))
-              dataGridView1.Rows[RowIndex - 2].Cells[ColumnIndex + 1].Value = "0C";
-            if (dataGridView1.Rows[RowIndex - 3].Cells[ColumnIndex + 1].Value.Equals("1E"))
-              dataGridView1.Rows[RowIndex - 3].Cells[ColumnIndex + 1].Value = "0C";
-          }
+         // // clear fischereien
+         // if (dataGridView1.Rows[RowIndex].Cells[ColumnIndex].Value.Equals("0E"))
+         // {
+         //   dataGridView1.Rows[RowIndex].Cells[ColumnIndex].Value = "0C";
+         //   if (dataGridView1.Rows[RowIndex - 1].Cells[ColumnIndex - 1].Value.Equals("1E"))
+         //     dataGridView1.Rows[RowIndex - 1].Cells[ColumnIndex - 1].Value = "0C";
+         //   if (dataGridView1.Rows[RowIndex - 1].Cells[ColumnIndex].Value.Equals("1E"))
+         //     dataGridView1.Rows[RowIndex - 1].Cells[ColumnIndex].Value = "0C";
+         //   if (dataGridView1.Rows[RowIndex - 2].Cells[ColumnIndex].Value.Equals("1E"))
+         //     dataGridView1.Rows[RowIndex - 2].Cells[ColumnIndex].Value = "0C";
+         //   if (dataGridView1.Rows[RowIndex - 3].Cells[ColumnIndex].Value.Equals("1E"))
+         //     dataGridView1.Rows[RowIndex - 3].Cells[ColumnIndex].Value = "0C";
+         //   if (dataGridView1.Rows[RowIndex - 1].Cells[ColumnIndex + 1].Value.Equals("1E"))
+         //     dataGridView1.Rows[RowIndex - 1].Cells[ColumnIndex + 1].Value = "0C";
+         //   if (dataGridView1.Rows[RowIndex - 2].Cells[ColumnIndex + 1].Value.Equals("1E"))
+         //     dataGridView1.Rows[RowIndex - 2].Cells[ColumnIndex + 1].Value = "0C";
+         //   if (dataGridView1.Rows[RowIndex - 3].Cells[ColumnIndex + 1].Value.Equals("1E"))
+         //     dataGridView1.Rows[RowIndex - 3].Cells[ColumnIndex + 1].Value = "0C";
+         // }
           // clear haus a1
           if (dataGridView1.Rows[RowIndex].Cells[ColumnIndex].Value.Equals("A1"))
           {
@@ -369,10 +486,45 @@ namespace PatrizierKartenEditor
                                                   dataGridView1.Rows[RowIndex + 2].Cells[ColumnIndex + 1].Value = "10";
                                                 }
                                               }
+       //   // clear steinfelsen 3
+       //   if (dataGridView1.Rows[RowIndex].Cells[ColumnIndex].Value.Equals("0D"))
+       //     if (dataGridView1.Rows[RowIndex + 1].Cells[ColumnIndex].Value.Equals("0D"))
+       //
+       //       if (dataGridView1.Rows[RowIndex - 1].Cells[ColumnIndex].Value.Equals("20") || dataGridView1.Rows[RowIndex - 1].Cells[ColumnIndex].Value.Equals("09") || dataGridView1.Rows[RowIndex - 1].Cells[ColumnIndex].Value.Equals("10") || dataGridView1.Rows[RowIndex - 1].Cells[ColumnIndex].Value.Equals("11"))
+       //         if (dataGridView1.Rows[RowIndex + 2].Cells[ColumnIndex].Value.Equals("20") || dataGridView1.Rows[RowIndex + 3].Cells[ColumnIndex].Value.Equals("09") || dataGridView1.Rows[RowIndex + 3].Cells[ColumnIndex].Value.Equals("10") || dataGridView1.Rows[RowIndex + 3].Cells[ColumnIndex].Value.Equals("11"))
+       //
+       //           if (dataGridView1.Rows[RowIndex - 1].Cells[ColumnIndex - 1].Value.Equals("20") || dataGridView1.Rows[RowIndex - 1].Cells[ColumnIndex - 1].Value.Equals("09") || dataGridView1.Rows[RowIndex - 1].Cells[ColumnIndex - 1].Value.Equals("10") || dataGridView1.Rows[RowIndex - 1].Cells[ColumnIndex - 1].Value.Equals("11"))
+       //             if (dataGridView1.Rows[RowIndex].Cells[ColumnIndex - 1].Value.Equals("20") || dataGridView1.Rows[RowIndex].Cells[ColumnIndex - 1].Value.Equals("09") || dataGridView1.Rows[RowIndex].Cells[ColumnIndex - 1].Value.Equals("10") || dataGridView1.Rows[RowIndex].Cells[ColumnIndex - 1].Value.Equals("11"))
+       //               if (dataGridView1.Rows[RowIndex + 1].Cells[ColumnIndex - 1].Value.Equals("20") || dataGridView1.Rows[RowIndex + 1].Cells[ColumnIndex - 1].Value.Equals("09") || dataGridView1.Rows[RowIndex + 1].Cells[ColumnIndex - 1].Value.Equals("10") || dataGridView1.Rows[RowIndex + 1].Cells[ColumnIndex - 1].Value.Equals("11"))
+       //                 if (dataGridView1.Rows[RowIndex + 2].Cells[ColumnIndex - 1].Value.Equals("20") || dataGridView1.Rows[RowIndex + 2].Cells[ColumnIndex - 1].Value.Equals("09") || dataGridView1.Rows[RowIndex + 2].Cells[ColumnIndex - 1].Value.Equals("10") || dataGridView1.Rows[RowIndex + 2].Cells[ColumnIndex - 1].Value.Equals("11"))
+       //
+       //                   if (dataGridView1.Rows[RowIndex - 1].Cells[ColumnIndex + 1].Value.Equals("20") || dataGridView1.Rows[RowIndex].Cells[ColumnIndex + 1].Value.Equals("09") || dataGridView1.Rows[RowIndex].Cells[ColumnIndex + 1].Value.Equals("10") || dataGridView1.Rows[RowIndex].Cells[ColumnIndex + 1].Value.Equals("11"))
+       //                     if (dataGridView1.Rows[RowIndex].Cells[ColumnIndex + 1].Value.Equals("20") || dataGridView1.Rows[RowIndex].Cells[ColumnIndex + 1].Value.Equals("09") || dataGridView1.Rows[RowIndex].Cells[ColumnIndex + 1].Value.Equals("10") || dataGridView1.Rows[RowIndex].Cells[ColumnIndex + 1].Value.Equals("11"))
+       //                       if (dataGridView1.Rows[RowIndex + 4].Cells[ColumnIndex + 1].Value.Equals("20") || dataGridView1.Rows[RowIndex + 4].Cells[ColumnIndex + 1].Value.Equals("09") || dataGridView1.Rows[RowIndex + 4].Cells[ColumnIndex + 1].Value.Equals("10") || dataGridView1.Rows[RowIndex + 4].Cells[ColumnIndex + 1].Value.Equals("11"))
+       //                       {
+       //                         if (dataGridView1.Rows[RowIndex - 1].Cells[ColumnIndex].Value.Equals("20") || dataGridView1.Rows[RowIndex + 3].Cells[ColumnIndex].Value.Equals("20"))
+       //                         {
+       //                           dataGridView1.Rows[RowIndex].Cells[ColumnIndex].Value = "20";
+       //                           dataGridView1.Rows[RowIndex + 1].Cells[ColumnIndex].Value = "20";
+       //                           dataGridView1.Rows[RowIndex + 2].Cells[ColumnIndex].Value = "20";
+       //                           dataGridView1.Rows[RowIndex + 1].Cells[ColumnIndex + 1].Value = "20";
+       //                           dataGridView1.Rows[RowIndex + 2].Cells[ColumnIndex + 1].Value = "20";
+       //                           dataGridView1.Rows[RowIndex + 3].Cells[ColumnIndex + 1].Value = "20";
+       //                         }
+       //                         if (dataGridView1.Rows[RowIndex - 1].Cells[ColumnIndex].Value.Equals("10") || dataGridView1.Rows[RowIndex + 3].Cells[ColumnIndex].Value.Equals("10"))
+       //                         {
+       //                           dataGridView1.Rows[RowIndex].Cells[ColumnIndex].Value = "10";
+       //                           dataGridView1.Rows[RowIndex + 1].Cells[ColumnIndex].Value = "10";
+       //                           dataGridView1.Rows[RowIndex + 2].Cells[ColumnIndex].Value = "10";
+       //                           dataGridView1.Rows[RowIndex + 1].Cells[ColumnIndex + 1].Value = "10";
+       //                           dataGridView1.Rows[RowIndex + 2].Cells[ColumnIndex + 1].Value = "10";
+       //                           dataGridView1.Rows[RowIndex + 3].Cells[ColumnIndex + 1].Value = "10";
+       //                         }
+       //                       }
         }
       // haus oben rechts von der inneren straße 
-      for (int ColumnIndex = 1; ColumnIndex < 127; ColumnIndex += 1)
-        for (int RowIndex = 2; RowIndex < 224; RowIndex += 1)
+      for (int ColumnIndex = 0; ColumnIndex < 125; ColumnIndex++)
+        for (int RowIndex = 4; RowIndex < 226; RowIndex++)
           if (dataGridView1.Rows[RowIndex].Cells[ColumnIndex].Value.Equals("83") || dataGridView1.Rows[RowIndex].Cells[ColumnIndex].Value.Equals("80"))
             if (dataGridView1.Rows[RowIndex - 1].Cells[ColumnIndex].Value.Equals("83") || dataGridView1.Rows[RowIndex - 1].Cells[ColumnIndex].Value.Equals("80"))
               if (dataGridView1.Rows[RowIndex].Cells[ColumnIndex + 1].Value.Equals("83") || dataGridView1.Rows[RowIndex].Cells[ColumnIndex + 1].Value.Equals("80"))
@@ -392,8 +544,8 @@ namespace PatrizierKartenEditor
                               dataGridView1.Rows[RowIndex - 4].Cells[ColumnIndex + 2].Value = "9E";
                             }
       // haus oben links von der inneren straße 
-      for (int ColumnIndex = 1; ColumnIndex < 127; ColumnIndex += 1)
-        for (int RowIndex = 2; RowIndex < 224; RowIndex += 1)
+      for (int ColumnIndex = 1; ColumnIndex < 128; ColumnIndex++)
+        for (int RowIndex = 4; RowIndex < 226; RowIndex++)
           if (dataGridView1.Rows[RowIndex].Cells[ColumnIndex].Value.Equals("83") || dataGridView1.Rows[RowIndex].Cells[ColumnIndex].Value.Equals("80"))
             if (dataGridView1.Rows[RowIndex - 1].Cells[ColumnIndex].Value.Equals("A0") || dataGridView1.Rows[RowIndex - 1].Cells[ColumnIndex].Value.Equals("84") || dataGridView1.Rows[RowIndex - 1].Cells[ColumnIndex].Value.Equals("91"))
               if (dataGridView1.Rows[RowIndex - 2].Cells[ColumnIndex].Value.Equals("A0") || dataGridView1.Rows[RowIndex - 2].Cells[ColumnIndex].Value.Equals("84") || dataGridView1.Rows[RowIndex - 2].Cells[ColumnIndex].Value.Equals("91"))
@@ -410,8 +562,8 @@ namespace PatrizierKartenEditor
                         dataGridView1.Rows[RowIndex - 4].Cells[ColumnIndex - 1].Value = "9E";
                       }
       // haus unten rechts von der inneren straße 
-      for (int ColumnIndex = 1; ColumnIndex < 127; ColumnIndex += 1)
-        for (int RowIndex = 2; RowIndex < 224; RowIndex += 1)
+      for (int ColumnIndex = 0; ColumnIndex < 126; ColumnIndex++)
+        for (int RowIndex = 1; RowIndex < 224; RowIndex++)
           if (dataGridView1.Rows[RowIndex].Cells[ColumnIndex].Value.Equals("83") || dataGridView1.Rows[RowIndex].Cells[ColumnIndex].Value.Equals("80"))
             if (dataGridView1.Rows[RowIndex + 1].Cells[ColumnIndex + 1].Value.Equals("A0") || dataGridView1.Rows[RowIndex + 1].Cells[ColumnIndex + 1].Value.Equals("84") || dataGridView1.Rows[RowIndex + 1].Cells[ColumnIndex + 1].Value.Equals("91"))
               if (dataGridView1.Rows[RowIndex].Cells[ColumnIndex + 1].Value.Equals("A0") || dataGridView1.Rows[RowIndex].Cells[ColumnIndex + 1].Value.Equals("84") || dataGridView1.Rows[RowIndex].Cells[ColumnIndex + 1].Value.Equals("91"))
@@ -428,8 +580,8 @@ namespace PatrizierKartenEditor
                         dataGridView1.Rows[RowIndex].Cells[ColumnIndex + 2].Value = "9E";
                       }
       // haus unten links von der inneren straße 
-      for (int ColumnIndex = 1; ColumnIndex < 127; ColumnIndex += 1)
-        for (int RowIndex = 2; RowIndex < 224; RowIndex += 1)
+      for (int ColumnIndex = 2; ColumnIndex < 128; ColumnIndex++)
+        for (int RowIndex = 1; RowIndex < 224; RowIndex++)
           if (dataGridView1.Rows[RowIndex].Cells[ColumnIndex].Value.Equals("83") || dataGridView1.Rows[RowIndex].Cells[ColumnIndex].Value.Equals("80"))
             if (dataGridView1.Rows[RowIndex - 1].Cells[ColumnIndex - 1].Value.Equals("A0") || dataGridView1.Rows[RowIndex - 1].Cells[ColumnIndex - 1].Value.Equals("84"))
               if (dataGridView1.Rows[RowIndex].Cells[ColumnIndex - 1].Value.Equals("A0") || dataGridView1.Rows[RowIndex].Cells[ColumnIndex - 1].Value.Equals("84"))
@@ -446,8 +598,8 @@ namespace PatrizierKartenEditor
                         dataGridView1.Rows[RowIndex].Cells[ColumnIndex - 2].Value = "9E";
                       }
       // fischer
-      for (int ColumnIndex = 126; ColumnIndex > 0; ColumnIndex--)
-        for (int RowIndex = 223; RowIndex > 2; RowIndex--)
+      for (int ColumnIndex = 125; ColumnIndex >= 0; ColumnIndex--)
+        for (int RowIndex = 222; RowIndex >= 3; RowIndex--)
           if (dataGridView1.Rows[RowIndex].Cells[ColumnIndex].Value.Equals("0C"))
             if (dataGridView1.Rows[RowIndex + 1].Cells[ColumnIndex].Value.Equals("0D") || dataGridView1.Rows[RowIndex].Cells[ColumnIndex + 1].Value.Equals("0D") || dataGridView1.Rows[RowIndex].Cells[ColumnIndex - 1].Value.Equals("0D") || dataGridView1.Rows[RowIndex + 1].Cells[ColumnIndex - 1].Value.Equals("0D") || dataGridView1.Rows[RowIndex + 1].Cells[ColumnIndex + 1].Value.Equals("0D") || dataGridView1.Rows[RowIndex - 1].Cells[ColumnIndex + 1].Value.Equals("0D") || dataGridView1.Rows[RowIndex - 1].Cells[ColumnIndex - 1].Value.Equals("0D"))
               if (dataGridView1.Rows[RowIndex - 1].Cells[ColumnIndex].Value.Equals("0C"))
@@ -464,8 +616,8 @@ namespace PatrizierKartenEditor
                                     if (!dataGridView1.Rows[RowIndex + 1].Cells[ColumnIndex + 1].Value.Equals("0E"))
                                       dataGridView1.Rows[RowIndex].Cells[ColumnIndex].Value = "0E";
       // restliches haus oben rechts von der inneren straße 
-      for (int ColumnIndex = 1; ColumnIndex < 127; ColumnIndex += 1)
-        for (int RowIndex = 2; RowIndex < 224; RowIndex += 1)
+      for (int ColumnIndex = 0; ColumnIndex < 126; ColumnIndex++)
+        for (int RowIndex = 4; RowIndex < 226; RowIndex++)
           if (dataGridView1.Rows[RowIndex].Cells[ColumnIndex].Value.Equals("83") || dataGridView1.Rows[RowIndex].Cells[ColumnIndex].Value.Equals("80"))
             if (dataGridView1.Rows[RowIndex - 1].Cells[ColumnIndex].Value.Equals("83") || dataGridView1.Rows[RowIndex - 1].Cells[ColumnIndex].Value.Equals("80"))
               if (dataGridView1.Rows[RowIndex].Cells[ColumnIndex + 1].Value.Equals("83") || dataGridView1.Rows[RowIndex].Cells[ColumnIndex + 1].Value.Equals("80"))
@@ -485,8 +637,8 @@ namespace PatrizierKartenEditor
                             dataGridView1.Rows[RowIndex - 4].Cells[ColumnIndex + 2].Value = "9E";
                           }
       // restliches haus unten links von der inneren straße 
-      for (int ColumnIndex = 1; ColumnIndex < 127; ColumnIndex += 1)
-        for (int RowIndex = 2; RowIndex < 224; RowIndex += 1)
+      for (int ColumnIndex = 2; ColumnIndex < 128; ColumnIndex++)
+        for (int RowIndex = 1; RowIndex < 224; RowIndex++)
           if (dataGridView1.Rows[RowIndex].Cells[ColumnIndex].Value.Equals("83") || dataGridView1.Rows[RowIndex].Cells[ColumnIndex].Value.Equals("80"))
             if (dataGridView1.Rows[RowIndex - 1].Cells[ColumnIndex - 1].Value.Equals("A0") || dataGridView1.Rows[RowIndex - 1].Cells[ColumnIndex - 1].Value.Equals("84"))
               if (dataGridView1.Rows[RowIndex].Cells[ColumnIndex - 1].Value.Equals("A0") || dataGridView1.Rows[RowIndex].Cells[ColumnIndex - 1].Value.Equals("84"))
@@ -588,8 +740,8 @@ namespace PatrizierKartenEditor
       //      dataGridView1.Rows[RowIndex].Cells[ColumnIndex].Value = "06";
 
       // arbeitsplatz alles
-      for (int ColumnIndex = 3; ColumnIndex < 125; ColumnIndex += 1)
-        for (int RowIndex = 8; RowIndex < 224; RowIndex += 1)
+      for (int ColumnIndex = 2; ColumnIndex < 126; ColumnIndex++)
+        for (int RowIndex = 8; RowIndex < 226; RowIndex++)
 
           if (dataGridView1.Rows[RowIndex - 4].Cells[ColumnIndex - 2].Value.Equals("04") || dataGridView1.Rows[RowIndex - 4].Cells[ColumnIndex - 2].Value.Equals("10") || dataGridView1.Rows[RowIndex - 4].Cells[ColumnIndex - 2].Value.Equals("11") || dataGridView1.Rows[RowIndex - 4].Cells[ColumnIndex - 2].Value.Equals("20") || dataGridView1.Rows[RowIndex - 4].Cells[ColumnIndex - 2].Value.Equals("3B"))
 
@@ -625,10 +777,18 @@ namespace PatrizierKartenEditor
       //      dataGridView1.Rows[RowIndex].Cells[ColumnIndex].Value = "0D";
 
       // äußerstes gebiet bebaubar machen => Achtung - Stadtrat möchte alle 15 Tage die äußerste Stadtmauer erweitern!
-      for (int ColumnIndex = 1; ColumnIndex < 127; ColumnIndex += 1)
-        for (int RowIndex = 2; RowIndex < 224; RowIndex += 1)
+      for (int ColumnIndex = 0; ColumnIndex < 128; ColumnIndex++)
+        for (int RowIndex = 0; RowIndex < 226; RowIndex++)
           if (dataGridView1.Rows[RowIndex].Cells[ColumnIndex].Value.Equals("10"))
             dataGridView1.Rows[RowIndex].Cells[ColumnIndex].Value = "A0";
+
+      buttonZoomIn.Enabled = true;
+      buttonZoomOut.Enabled = true;
+      buttonColor.Enabled = true;
+      buttonSave.Enabled = true;
+      buttonZoomOutMuch.Enabled = true;
+      buttonZoomInMuch.Enabled = true;
+      buttonScript.Enabled = true;
     }
   }
 }
