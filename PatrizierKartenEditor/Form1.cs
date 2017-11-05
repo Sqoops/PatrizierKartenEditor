@@ -41,8 +41,8 @@ namespace PatrizierKartenEditor
       }
       this.WindowState = FormWindowState.Minimized;
       this.Show();
-      this.WindowState = FormWindowState.Normal;
-      //this.WindowState = FormWindowState.Maximized;
+      //this.WindowState = FormWindowState.Normal;
+      this.WindowState = FormWindowState.Maximized;
     }
     static void Demo(DataGridView dgv)
     {
@@ -720,7 +720,7 @@ namespace PatrizierKartenEditor
                       if (dataGridView1.Rows[RowIndex - 2].Cells[ColumnIndex].Value.Equals("11") || dataGridView1.Rows[RowIndex - 2].Cells[ColumnIndex].Value.Equals("91"))
                         if (dataGridView1.Rows[RowIndex - 5].Cells[ColumnIndex + 1].Value.Equals("0A"))
                           if (dataGridView1.Rows[RowIndex - 4].Cells[ColumnIndex + 1].Value.Equals("09"))
-                              if (dataGridView1.Rows[RowIndex - 3].Cells[ColumnIndex + 1].Value.Equals("11") || dataGridView1.Rows[RowIndex - 3].Cells[ColumnIndex + 1].Value.Equals("91"))
+                            if (dataGridView1.Rows[RowIndex - 3].Cells[ColumnIndex + 1].Value.Equals("11") || dataGridView1.Rows[RowIndex - 3].Cells[ColumnIndex + 1].Value.Equals("91"))
                               if (dataGridView1.Rows[RowIndex - 2].Cells[ColumnIndex + 1].Value.Equals("11") || dataGridView1.Rows[RowIndex - 2].Cells[ColumnIndex + 1].Value.Equals("91"))
                                 if (dataGridView1.Rows[RowIndex].Cells[ColumnIndex].Value.Equals("A1"))
                                   dataGridView1.Rows[RowIndex].Cells[ColumnIndex].Value = "A0";
@@ -728,21 +728,21 @@ namespace PatrizierKartenEditor
       // remove haus links von mauerecke
       for (int ColumnIndex = 0; ColumnIndex < 127; ColumnIndex++)
         for (int RowIndex = 2; RowIndex < 226; RowIndex++)
-       //   if (dataGridView1.Rows[RowIndex - 3].Cells[ColumnIndex + 1].Value.Equals("11"))
-            if (dataGridView1.Rows[RowIndex - 2].Cells[ColumnIndex + 1].Value.Equals("09"))
-              if (dataGridView1.Rows[RowIndex - 1].Cells[ColumnIndex + 1].Value.Equals("09"))
-                if (dataGridView1.Rows[RowIndex].Cells[ColumnIndex + 1].Value.Equals("0A"))
-                  if (dataGridView1.Rows[RowIndex].Cells[ColumnIndex].Value.Equals("A2"))
-                    dataGridView1.Rows[RowIndex].Cells[ColumnIndex].Value = "A0";
+          //   if (dataGridView1.Rows[RowIndex - 3].Cells[ColumnIndex + 1].Value.Equals("11"))
+          if (dataGridView1.Rows[RowIndex - 2].Cells[ColumnIndex + 1].Value.Equals("09"))
+            if (dataGridView1.Rows[RowIndex - 1].Cells[ColumnIndex + 1].Value.Equals("09"))
+              if (dataGridView1.Rows[RowIndex].Cells[ColumnIndex + 1].Value.Equals("0A"))
+                if (dataGridView1.Rows[RowIndex].Cells[ColumnIndex].Value.Equals("A2"))
+                  dataGridView1.Rows[RowIndex].Cells[ColumnIndex].Value = "A0";
 
       // remove haus rechts von mauerecke
       for (int ColumnIndex = 1; ColumnIndex < 127; ColumnIndex++)
         for (int RowIndex = 2; RowIndex < 226; RowIndex++)
-            if (dataGridView1.Rows[RowIndex - 2].Cells[ColumnIndex - 1].Value.Equals("09"))
-              if (dataGridView1.Rows[RowIndex - 1].Cells[ColumnIndex - 1].Value.Equals("09"))
-                if (dataGridView1.Rows[RowIndex].Cells[ColumnIndex - 1].Value.Equals("0A"))
-                  if (dataGridView1.Rows[RowIndex].Cells[ColumnIndex].Value.Equals("A1"))
-                    dataGridView1.Rows[RowIndex].Cells[ColumnIndex].Value = "A0";
+          if (dataGridView1.Rows[RowIndex - 2].Cells[ColumnIndex - 1].Value.Equals("09"))
+            if (dataGridView1.Rows[RowIndex - 1].Cells[ColumnIndex - 1].Value.Equals("09"))
+              if (dataGridView1.Rows[RowIndex].Cells[ColumnIndex - 1].Value.Equals("0A"))
+                if (dataGridView1.Rows[RowIndex].Cells[ColumnIndex].Value.Equals("A1"))
+                  dataGridView1.Rows[RowIndex].Cells[ColumnIndex].Value = "A0";
 
       // remove haus an straßenecke
       for (int ColumnIndex = 1; ColumnIndex < 127; ColumnIndex++)
